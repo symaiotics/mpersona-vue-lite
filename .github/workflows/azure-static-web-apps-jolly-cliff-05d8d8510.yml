@@ -14,6 +14,11 @@ jobs:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
+    env:
+      VITE_SELF: https://jolly-cliff-05d8d8510.4.azurestaticapps.net
+      VITE_API_URL: https://mpersona-node-lite.azurewebsites.net
+      VITE_WEBSOCKET_URL: wss://mpersona-node-lite.azurewebsites.net
+      VITE_STORAGE_URL: https://mpersona.blob.core.windows.net    
     steps:
       - uses: actions/checkout@v3
         with:
