@@ -2,6 +2,7 @@ import { ref } from 'vue'
 
 let adminModels = ref(
     [
+        { provider: 'azureOpenAi', maxTokens: 128000, per1kInput: 0.04, per1kOutput: 0.08, model: "gpt-4", label: "Azure GPT-4 (128k)" },
         { provider: 'anthropic', maxTokens: 200000, per1kInput: 0.008, per1kOutput: 0.024, model: "claude-2.1", label: "Claude 2.1" },
         { provider: 'anthropic', maxTokens: 100000, per1kInput: 0.00163, per1kOutput: 0.00551, model: "claude-instant-1.2", label: "Claude 2.1 Instant" },
         { provider: 'openAi', maxTokens: 128000, per1kInput: 0.01, per1kOutput: 0.03, model: "gpt-4-1106-preview", label: "OpenAI GPT-4 Turbo (128k)" },
